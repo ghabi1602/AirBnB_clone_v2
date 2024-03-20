@@ -41,7 +41,7 @@ class FileStorage:
             json.dump(temp, f)
 
     def reload(self):
-        """Loads storage dictionary from file"""
+        """Loads storage dictionary"""
 
         classes = {
                     'BaseModel': BaseModel, 'User': User, 'Place': Place,
@@ -65,6 +65,6 @@ class FileStorage:
 
     def close(self):
         """Calls reload method for deserializing
-        the JSON file to objects
+        the JSON file into objects
         """
         self.reload()
