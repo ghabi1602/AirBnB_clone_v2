@@ -3,6 +3,7 @@ from datetime import datetime
 from op.path import isdir
 
 def do_pack():
+    """fabric function that generates a tgz archive"""
     try:
         date = datetime.now().strftime('%Y%m%d%H%M%S')
         if isdir(versions) is False:
