@@ -12,7 +12,7 @@ def do_pack():
             local('mkdir versions')
 
         file_name = "versions/web_static_{}.tgz".format(date)
-        local("tar -cvzf {} web_server".format(file_name))
+        local("tar -cvzf {} web_static".format(file_name))
         return file_name
     except:
         return None
